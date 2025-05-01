@@ -1,0 +1,15 @@
+{
+    "project_name": "dbt Project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_').replace('.', '_') }}",
+    "adapter": [
+        "clickhouse",
+        "bigquery",
+        "databricks",
+        "duckdb",
+        "redshift",
+        "snowflake",
+        "postgres",
+        "spark",
+        "trino"
+    ]
+}

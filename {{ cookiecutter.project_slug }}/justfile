@@ -1,0 +1,33 @@
+default:
+    just --list
+
+compile:
+    uv run dbt compile
+
+debug:
+    uv run dbt debug
+
+deps:
+    uv run dbt deps
+
+docs:
+    uv run dbt docs generate
+    uv run dbt docs serve
+
+run:
+    uv run dbt run
+
+seed:
+    uv run dbt seed
+
+test:
+    uv run dbt test
+
+lint:
+    uv run sqlfluff lint
+    uv run yamllint .
+    uv run ruff check --fix
+
+format:
+    uv run sqlfluff format
+    uv run ruff format

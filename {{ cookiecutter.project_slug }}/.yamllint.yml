@@ -1,0 +1,12 @@
+---
+
+extends: default
+
+ignore:
+  - dbt_packages/
+  - .venv/
+
+rules:
+  document-start: disable
+  line-length:
+    max: 100
