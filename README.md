@@ -13,10 +13,10 @@
 
 ## Usage
 
-Prerequisites: Install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/installation.html) and [uv](https://docs.astral.sh/uv/getting-started/installation/).
+Prerequisite: Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 Generate a new dbt project:
 
 ```bash
-cookiecutter gh:northstardataco/cookiecutter-dbt
+uvx cookiecutter gh:northstardataco/cookiecutter-dbt
 ```
