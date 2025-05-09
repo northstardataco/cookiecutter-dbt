@@ -13,3 +13,12 @@ templater = "dbt"
 
 [tool.sqlfluff.templater.dbt]
 project_dir = "./"
+
+[tool.sqlfluff.rules.capitalisation.keywords]
+capitalisation_policy = "lower"
+
+[tool.ruff]
+extend-exclude = ["target", "dbt_packages"]
+
+[tool.ruff.lint]
+extend-select = ["I"]
