@@ -3,20 +3,18 @@ name: CI
 on: push
 
 jobs:
-  lint:
+  lint-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v4
+      - uses: extractions/setup-just@v3
+      - uses: astral-sh/setup-uv@v5
 
       - name: Install the project
         run: uv sync
 
       - name: Run linters
-        run: uv run just lint-ci
+        run: just lint-ci
 
       - name: Run tests
-        run: uv run just test-ci
+        run: just test-ci
